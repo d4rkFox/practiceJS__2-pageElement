@@ -12,7 +12,7 @@
 
 5) Добавить нумерацию выведенных фильмов */
 
-'use strict';
+"use strict";
 
 const movieDB = {
     movies: [
@@ -20,7 +20,37 @@ const movieDB = {
         "Лига справедливости",
         "Ла-ла лэнд",
         "Одержимость",
-        "Скотт Пилигрим против..."
-    ]
+        "Скотт Пилигрим против...",
+    ],
 };
+const wrapperAdv = document.querySelector(".promo__adv"),
+    genreTitle = document.querySelector(".promo__genre"),
+    backgroundTitle = document.querySelector(".promo__bg"),
+    listMoviesTitle = document.querySelector(".promo__interactive-list");
+  
 
+let advImages  = wrapperAdv.querySelectorAll("img"),
+    listMovies = document.querySelectorAll(".promo__interactive-item"),
+    // listMoviesAdd = document.createElement("div"),
+    listMoviesNew;
+
+
+advImages.forEach((item) => {
+    item.remove();
+});
+
+genreTitle.innerHTML = "Драма";
+
+backgroundTitle.style.backgroundImage = "url('img/bg.jpg')";
+
+listMovies.forEach (item => {
+    item.remove();
+});
+movieDB.movies.sort();
+// listMoviesAdd.classList.add("item-list");
+movieDB.movies.forEach((item, i) => {
+// listMoviesTitle.append(listMoviesAdd);
+//     listMoviesAdd.innerHTML += `<li class="promo__interactive-item"> ${i+1} ${item} <div class="delete"></div></li>`;
+listMoviesTitle.insertAdjacentHTML("beforeend", `<li class="promo__interactive-item"> ${i+1} ${item} <div class="delete"></div></li>`);
+
+});

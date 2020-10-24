@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -14,7 +14,7 @@
         align-items: center;
         height: 100%;
         width: 300px;
-        background: #FFD500;
+        background: #ffd500;
         form {
             position: relative;
             width: 260px;
@@ -34,12 +34,13 @@
                 }
             }
             &:after {
-                content: '';
+                content: "";
                 display: block;
                 position: absolute;
                 top: 2px;
                 right: 10px;
-                background: url('../icons/search.svg') center (center / cover) no-repeat;
+                background: url("../icons/search.svg") center (center / cover)
+                    no-repeat;
                 width: 24px;
                 height: 24px;
             }
@@ -65,17 +66,18 @@
             display: block;
             font-size: 28px;
             line-height: 33px;
-            color: #D6D9DC;
+            color: #d6d9dc;
             text-decoration: none;
             font-weight: 300;
             padding-left: 40px;
             margin-top: 18px;
+
             &:hover {
-                color: #FFD500;
+                color: #ffd500;
             }
             &_active {
-                border-left: 2px solid  #FFD500;
-                color:  #FFD500;
+                border-left: 2px solid #ffd500;
+                color: #ffd500;
             }
         }
     }
@@ -84,7 +86,7 @@
     }
     &__bg {
         height: 360px;
-        background: url('../img/mars.webp') center (center / cover) no-repeat;
+        background: url("../img/mars.webp") center (center / cover) no-repeat;
         background-position: top;
         padding: 107px 0 0 61px;
     }
@@ -92,14 +94,14 @@
         font-weight: bold;
         font-size: 18px;
         line-height: 21px;
-        color: #FFFFFF;
+        color: #ffffff;
         text-transform: uppercase;
     }
     &__title {
         font-weight: bold;
         font-size: 48px;
         line-height: 56px;
-        color: #FFFFFF;
+        color: #ffffff;
         text-transform: uppercase;
     }
     &__descr {
@@ -107,7 +109,7 @@
         font-weight: bold;
         font-size: 18px;
         line-height: 21px;
-        color: #FFFFFF;
+        color: #ffffff;
         text-transform: uppercase;
     }
     &__ratings {
@@ -116,7 +118,7 @@
             font-weight: bold;
             font-size: 18px;
             line-height: 21px;
-            color: #FFD500;
+            color: #ffd500;
             margin-right: 25px;
         }
     }
@@ -133,7 +135,7 @@
             line-height: 28px;
             color: #000000;
             &:after {
-                content: '';
+                content: "";
                 display: block;
                 width: 33%;
                 height: 2px;
@@ -165,20 +167,35 @@
                 transform: translateY(-50%);
                 width: 20px;
                 height: 20px;
-                background: url('../icons/Star.svg') center (center / cover) no-repeat;
+                background: url("../icons/Star.svg") center (center / cover)
+                    no-repeat;
             }
             &:before {
-                content: '';
+                content: "";
                 position: absolute;
                 bottom: -5px;
                 display: block;
                 width: calc(100% - 40px);
                 height: 2px;
-                background-color: #FFD500;
+                background-color: #ffd500;
+            }
+
+            &:first-child {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: -30px;
+                    background-image: url("/icons/Star.svg");
+                    background-repeat: no-repeat;
+                    width: 20px;
+                    height: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
             }
             &:hover {
                 .delete {
-                    content: '';
+                    content: "";
                     display: block;
                     position: absolute;
                     right: 0px;
@@ -186,7 +203,8 @@
                     transform: translateY(-50%);
                     width: 20px;
                     height: 20px;
-                    background: url('../icons/trash.png') center (center / cover) no-repeat;
+                    background: url("../icons/trash.png") center
+                        (center / cover) no-repeat;
                     cursor: pointer;
                 }
             }
@@ -228,11 +246,11 @@
                 margin-top: 15px;
                 width: 170px;
                 height: 45px;
-                background: #FFD500;
+                background: #ffd500;
                 font-weight: bold;
                 font-size: 14px;
                 line-height: 14px;
-                color: #FFFFFF;
+                color: #ffffff;
                 border: none;
                 outline: none;
                 cursor: pointer;
@@ -250,7 +268,7 @@
             font-weight: bold;
             font-size: 18px;
             line-height: 21px;
-            color: #FFD500;
+            color: #ffd500;
             margin: 20px 0;
             text-align: center;
         }
